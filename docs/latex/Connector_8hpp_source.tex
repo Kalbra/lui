@@ -1,0 +1,47 @@
+\hypertarget{Connector_8hpp_source}{}\doxysection{Connector.\+hpp}
+\label{Connector_8hpp_source}\index{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/Connector.hpp@{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/Connector.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ kalle\ on\ 4/17/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ LUI\_CONNECTOR\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ LUI\_CONNECTOR\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}FemaleChannel.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}MaleChannel.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConnector}{Connector}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classConnector}{Connector}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ DataStream>}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classMaleChannel}{MaleChannel<DataStream>}}\ *newMale(\mbox{\hyperlink{classPropertySet}{PropertySet}}\ *property\_set)\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *male\_channel\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMaleChannel}{MaleChannel<DataStream>}}(\&current\_channel\_id,\ property\_set);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ male\_channels.push\_back(male\_channel);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ male\_channel;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ DataStream>}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classFemaleChannel}{FemaleChannel<DataStream>}}\ *newFemale(\mbox{\hyperlink{classPropertySet}{PropertySet}}\ *property\_set)\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *female\_channel\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classFemaleChannel}{FemaleChannel<DataStream>}}(\&current\_channel\_id,\ property\_set);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ female\_channels.push\_back(female\_channel);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ female\_channel;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ MalePointerVector\ male\_channels;}
+\DoxyCodeLine{00035\ \ \ \ \ FemalePointerVector\ female\_channels;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ ChannelId\ current\_channel\_id\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LUI\_CONNECTOR\_HPP}}
+
+\end{DoxyCode}

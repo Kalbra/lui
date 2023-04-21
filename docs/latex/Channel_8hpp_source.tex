@@ -1,0 +1,43 @@
+\hypertarget{Channel_8hpp_source}{}\doxysection{Channel.\+hpp}
+\label{Channel_8hpp_source}\index{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/Channel.hpp@{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/Channel.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ kalle\ on\ 4/17/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ LUI\_CHANNEL\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ LUI\_CHANNEL\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../ProjectFileIO/PropertySet.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ uint16\_t\ ChannelId;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChannel}{Channel}}\{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classChannel}{Channel}}(ChannelId\ *current\_channel\_id,\ \mbox{\hyperlink{classPropertySet}{PropertySet}}\ *property\_set)\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ channel\_id\ =\ *current\_channel\_id;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ *current\_channel\_id\ =\ *current\_channel\_id\ +\ 1;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ channel\_properties\ =\ property\_set;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ uint16\_t\ getChannelId()\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ channel\_id;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classPropertySet}{PropertySet}}\ *channel\_properties;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ ChannelId\ channel\_id;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LUI\_CHANNEL\_HPP}}
+
+\end{DoxyCode}

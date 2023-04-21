@@ -1,0 +1,27 @@
+\hypertarget{LcdNumberOutputBlock_8hpp_source}{}\doxysection{Lcd\+Number\+Output\+Block.\+hpp}
+\label{LcdNumberOutputBlock_8hpp_source}\index{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/LcdNumberOutputBlock.hpp@{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/LcdNumberOutputBlock.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <QLCDNumber>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}BaseOutputBlock.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}FemaleChannel.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLcdNumberOutputBlock}{LcdNumberOutputBlock}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseOutputBlock}{BaseOutputBlock}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classLcdNumberOutputBlock}{LcdNumberOutputBlock}}(\mbox{\hyperlink{classConnector}{Connector}}\ *connector,\ QWidget\ *widget)\ :\ \mbox{\hyperlink{classBaseOutputBlock}{BaseOutputBlock}}(connector,\ widget)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ lcd\_number\ =\ \textcolor{keyword}{new}\ QLCDNumber(widget);}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ female\_plugs\_of\_block.emplace\_back(connector-\/>newFemale<\textcolor{keywordtype}{int}>(property\_set));}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ lcd\_number-\/>setDecMode();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ lcd\_number-\/>setDigitCount(4);}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ update()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ lcd\_number-\/>display(std::get<\mbox{\hyperlink{classFemaleChannel}{FemaleChannel<int>}}*>(female\_plugs\_of\_block[0])-\/>GetData());}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ QLCDNumber\ *lcd\_number;}
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

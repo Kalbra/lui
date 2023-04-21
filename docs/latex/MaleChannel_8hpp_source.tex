@@ -1,0 +1,44 @@
+\hypertarget{MaleChannel_8hpp_source}{}\doxysection{Male\+Channel.\+hpp}
+\label{MaleChannel_8hpp_source}\index{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/MaleChannel.hpp@{/run/media/kalle/Data/Onedrive/Dokumente/Programmieren/QT/lui/src/Blocks/MaleChannel.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ kalle\ on\ 4/17/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ LUI\_MALECHANNEL\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ LUI\_MALECHANNEL\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}FemaleChannel.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ DataStream>}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMaleChannel}{MaleChannel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classChannel}{Channel}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classMaleChannel}{MaleChannel}}(ChannelId\ *channel\_id,\ \mbox{\hyperlink{classPropertySet}{PropertySet}}\ *property\_set)\ :\ \mbox{\hyperlink{classChannel}{Channel}}(channel\_id,\ property\_set)\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ channel\_properties-\/>addString(\textcolor{stringliteral}{"{}channel\_type"{}},\ \textcolor{stringliteral}{"{}male"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ ConnectToFemale(\mbox{\hyperlink{classFemaleChannel}{FemaleChannel<DataStream>}}\ *female\_channel)\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ female\_channel-\/>setDataStreamPointer(\&data);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ connected\_female\_channels.push\_back(female\_channel);}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ SetData(DataStream\ data\_)\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ data\ =\ data\_;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ FemalePointerVector\ connected\_female\_channels;}
+\DoxyCodeLine{00031\ \ \ \ \ DataStream\ data;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ std::vector<std::variant<MaleChannel<int>*>>\ MalePointerVector;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LUI\_MALECHANNEL\_HPP}}
+
+\end{DoxyCode}

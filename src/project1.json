@@ -1,0 +1,17 @@
+[
+    {
+        "CHANNEL_ID": 368,
+        "CHANNEL_TYPE": "female",
+        "DIGIT_COUNT": 4
+    },
+    {
+        "CHANNEL_ID": 369,
+        "CHANNEL_TYPE": "female",
+        "DIGIT_COUNT": 4
+    },
+    {
+        "CHANNEL_ID": 370,
+        "CHANNEL_TYPE": "female",
+        "DIGIT_COUNT": 4
+    }
+]

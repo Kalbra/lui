@@ -1,0 +1,107 @@
+\hypertarget{classPropertySet}{}\doxysection{Property\+Set Class Reference}
+\label{classPropertySet}\index{PropertySet@{PropertySet}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPropertySet_ae36ec228c0e841c4d5c14d3f7b2052ed}\label{classPropertySet_ae36ec228c0e841c4d5c14d3f7b2052ed}} 
+void {\bfseries add\+Float} (const QString \&, float)
+\item 
+\mbox{\Hypertarget{classPropertySet_a8abe04d40f1480e20497c1bdf3fef71e}\label{classPropertySet_a8abe04d40f1480e20497c1bdf3fef71e}} 
+void {\bfseries add\+String} (const QString \&, const QString \&)
+\item 
+\mbox{\Hypertarget{classPropertySet_aa2a2bb20c603486e448e932722fbbcb6}\label{classPropertySet_aa2a2bb20c603486e448e932722fbbcb6}} 
+void {\bfseries add\+Bool} (const QString \&, bool)
+\item 
+\mbox{\Hypertarget{classPropertySet_abfbe5ded35b5995b5490e21c33fec934}\label{classPropertySet_abfbe5ded35b5995b5490e21c33fec934}} 
+void {\bfseries get\+Float\+By\+Index} (uint16\+\_\+t, QString $\ast$, float $\ast$)
+\item 
+\mbox{\Hypertarget{classPropertySet_acd7898143fe4fcec8788ca45ab897070}\label{classPropertySet_acd7898143fe4fcec8788ca45ab897070}} 
+void {\bfseries get\+String\+By\+Index} (uint16\+\_\+t, QString $\ast$, QString $\ast$)
+\item 
+\mbox{\Hypertarget{classPropertySet_a2318d2384d84c5a61b506448ffd6ff04}\label{classPropertySet_a2318d2384d84c5a61b506448ffd6ff04}} 
+void {\bfseries get\+Bool\+By\+Index} (uint16\+\_\+t, QString $\ast$, bool $\ast$)
+\item 
+\mbox{\Hypertarget{classPropertySet_a59a7d2db438892abb7e0122093956646}\label{classPropertySet_a59a7d2db438892abb7e0122093956646}} 
+bool {\bfseries get\+Float\+By\+Key} (const QString \&, float $\ast$=nullptr, uint16\+\_\+t $\ast$=nullptr)
+\item 
+\mbox{\Hypertarget{classPropertySet_a194e716a098fa923927510bcfa3c9d94}\label{classPropertySet_a194e716a098fa923927510bcfa3c9d94}} 
+bool {\bfseries get\+String\+By\+Key} (const QString \&, QString $\ast$=nullptr, uint16\+\_\+t $\ast$=nullptr)
+\item 
+\mbox{\Hypertarget{classPropertySet_a28d2c735afa6000d98663a770b734d7f}\label{classPropertySet_a28d2c735afa6000d98663a770b734d7f}} 
+bool {\bfseries get\+Bool\+By\+Key} (const QString \&, bool $\ast$=nullptr, uint16\+\_\+t $\ast$=nullptr)
+\item 
+\mbox{\Hypertarget{classPropertySet_a1befbffe0098eb031fc38bc6d58ce360}\label{classPropertySet_a1befbffe0098eb031fc38bc6d58ce360}} 
+uint16\+\_\+t {\bfseries get\+Float\+Size} ()
+\item 
+\mbox{\Hypertarget{classPropertySet_a47dac48cb281b86572bc4fb7f1dfdc60}\label{classPropertySet_a47dac48cb281b86572bc4fb7f1dfdc60}} 
+uint16\+\_\+t {\bfseries get\+String\+Size} ()
+\item 
+\mbox{\Hypertarget{classPropertySet_a99ef5534985f2aa6ffeb9a0e13e837e4}\label{classPropertySet_a99ef5534985f2aa6ffeb9a0e13e837e4}} 
+uint16\+\_\+t {\bfseries get\+Bool\+Size} ()
+\item 
+void \mbox{\hyperlink{classPropertySet_add283e8ffd7500d2146a7f192b32651e}{add\+Std\+Float\+By\+Key}} (const QString \&key, float value)
+\begin{DoxyCompactList}\small\item\em Add property, no override. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPropertySet_a64d631e0cd3b08f62d75b2e06027afca}{add\+Std\+String\+By\+Key}} (const QString \&key, const QString \&value)
+\begin{DoxyCompactList}\small\item\em Add property, no override. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPropertySet_a4fc8fce65507f4cbcff05de50d3efe88}{add\+Std\+Bool\+By\+Key}} (const QString \&key, bool value)
+\begin{DoxyCompactList}\small\item\em Add property, no override. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPropertySet_a4fc8fce65507f4cbcff05de50d3efe88}\label{classPropertySet_a4fc8fce65507f4cbcff05de50d3efe88}} 
+\index{PropertySet@{PropertySet}!addStdBoolByKey@{addStdBoolByKey}}
+\index{addStdBoolByKey@{addStdBoolByKey}!PropertySet@{PropertySet}}
+\doxysubsubsection{\texorpdfstring{addStdBoolByKey()}{addStdBoolByKey()}}
+{\footnotesize\ttfamily void Property\+Set\+::add\+Std\+Bool\+By\+Key (\begin{DoxyParamCaption}\item[{const QString \&}]{key,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Add property, no override. 
+
+Adds an property if no property with the given key exists. Implementation for bool type. 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPropertySet_add283e8ffd7500d2146a7f192b32651e}\label{classPropertySet_add283e8ffd7500d2146a7f192b32651e}} 
+\index{PropertySet@{PropertySet}!addStdFloatByKey@{addStdFloatByKey}}
+\index{addStdFloatByKey@{addStdFloatByKey}!PropertySet@{PropertySet}}
+\doxysubsubsection{\texorpdfstring{addStdFloatByKey()}{addStdFloatByKey()}}
+{\footnotesize\ttfamily void Property\+Set\+::add\+Std\+Float\+By\+Key (\begin{DoxyParamCaption}\item[{const QString \&}]{key,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Add property, no override. 
+
+Adds an property if no property with the given key exists. Implementation for float type. 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPropertySet_a64d631e0cd3b08f62d75b2e06027afca}\label{classPropertySet_a64d631e0cd3b08f62d75b2e06027afca}} 
+\index{PropertySet@{PropertySet}!addStdStringByKey@{addStdStringByKey}}
+\index{addStdStringByKey@{addStdStringByKey}!PropertySet@{PropertySet}}
+\doxysubsubsection{\texorpdfstring{addStdStringByKey()}{addStdStringByKey()}}
+{\footnotesize\ttfamily void Property\+Set\+::add\+Std\+String\+By\+Key (\begin{DoxyParamCaption}\item[{const QString \&}]{key,  }\item[{const QString \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Add property, no override. 
+
+Adds an property if no property with the given key exists. Implementation for string type. 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/run/media/kalle/\+Data/\+Onedrive/\+Dokumente/\+Programmieren/\+QT/lui/src/\+Project\+File\+IO/Property\+Set.\+h\item 
+/run/media/kalle/\+Data/\+Onedrive/\+Dokumente/\+Programmieren/\+QT/lui/src/\+Project\+File\+IO/Property\+Set.\+cpp\end{DoxyCompactItemize}
